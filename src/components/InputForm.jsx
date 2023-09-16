@@ -25,6 +25,7 @@ export const InputForm = () => {
     );
     const data = await res.json();
     // console.log(data);
+    setContent("");
     router.refresh();
 
     //next js punya build in caching di browser
@@ -32,9 +33,12 @@ export const InputForm = () => {
     return data;
   };
 
+  
+
   return (
     <div className=" flex gap-4">
       <input
+        value={content}
         onChange={(e) => {
           setContent(e.target.value);
         }}

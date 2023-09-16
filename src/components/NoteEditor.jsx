@@ -1,5 +1,5 @@
 "use client";
- 
+
 import { InputForm } from "./InputForm";
 import { NoteCard } from "./NoteCard";
 
@@ -26,8 +26,8 @@ export const NoteEditor = ({ notesData }) => {
     <div className=" space-y-6 ">
       <InputForm />
       <div className=" space-y-4 ">
-        {notesData.map(({ content }) => {
-          return <NoteCard content={content} />;
+        {notesData.map(({ id, content }) => {
+          return <NoteCard key={id} id={id} content={content} />;
         })}
       </div>
     </div>

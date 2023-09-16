@@ -2,7 +2,7 @@ import { NoteEditor } from "@/components/NoteEditor";
 
 async function getNotes() {
   const res = await fetch(
-    "https://devscale-mockapi.fly.dev/api/collections/notes/records",
+    "https://devscale-mockapi.fly.dev/api/collections/notes/records?filter=(user='neuhendra@gmail.com')",
     {
       cache: "no-cache",
     }
