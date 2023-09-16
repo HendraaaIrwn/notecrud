@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input {
+    @apply w-full px-4 py-2 border-2 rounded-xl focus:outline-none shadow;
+  }
+
+  button {
+    @apply w-full px-4 py-2 bg-slate-900 hover:bg-slate-500  text-white rounded-xl shadow;
+  }
+}
+
+@layer components {
+  #editBtn,
+  #deleteBtn {
+    @apply w-28;
+  }
+}
