@@ -3,18 +3,42 @@
 @tailwind utilities;
 
 @layer base {
-  input {
-    @apply w-full px-4 py-2 border-2 rounded-xl focus:outline-none shadow;
-  }
-
-  button {
-    @apply w-full px-4 py-2 bg-slate-900 hover:bg-slate-500  text-white rounded-xl shadow;
+  body {
+    @apply bg-blue-50;
   }
 }
 
 @layer components {
   #editBtn,
+  #likeBtn,
   #deleteBtn {
-    @apply w-28;
+    @apply w-full px-4 py-1 rounded-xl bg-transparent text-slate-600  hover:bg-slate-200 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  #postBtn {
+    @apply px-4 py-1 rounded-lg bg-blue-500 text-white font-medium w-28 hover:bg-blue-700 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  #updateBtn {
+    @apply w-full px-4 py-1 rounded-xl bg-blue-500 text-white  hover:bg-blue-700 duration-300 transition ease-in-out cursor-pointer;
+  }
+  #updateTextArea {
+    @apply text-start align-text-top min-h-[120px] max-w-[865px] border-none focus:outline-none shadow-none resize-none;
+  }
+
+  #submitInput {
+    @apply w-full px-4 py-2 border-2 focus:outline-none shadow rounded-full;
+  }
+
+  #inputSearch {
+    @apply px-4 py-1 focus:outline-none shadow-none border-t-4 border-l-4 border-b-4 border-blue-500;
+  }
+
+  .iconHover {
+    @apply hover:bg-slate-200 duration-300 transition ease-in-out cursor-pointer;
+  }
+
+  .link {
+    @apply flex justify-center items-center text-sm text-white hover:text-black duration-300 transition ease-in-out cursor-pointer;
   }
 }

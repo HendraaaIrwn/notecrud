@@ -26,8 +26,8 @@ export const NoteEditor = ({ notesData }) => {
     <div className=" space-y-6 ">
       <InputForm />
       <div className=" space-y-4 ">
-        {notesData.map(({ id, content }) => {
-          return <NoteCard key={id} id={id} content={content} />;
+        {notesData.map(({ id, content, created }) => {
+          return <NoteCard key={id} id={id} content={content} created={created} />;
         })}
       </div>
     </div>

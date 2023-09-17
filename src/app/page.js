@@ -1,4 +1,5 @@
 import { NoteEditor } from "@/components/NoteEditor";
+import { Header } from "@/components/Header";
 
 async function getNotes() {
   const res = await fetch(
@@ -16,6 +17,7 @@ export default async function Page() {
 
   return (
     <div>
+      <Header />
       <NoteEditor notesData={items} />
     </div>
   );
